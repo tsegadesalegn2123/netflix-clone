@@ -1,0 +1,59 @@
+.title {
+  color: white;
+  margin: 0 0 10px;
+}
+.Row {
+  position: relative;
+  max-width: 100%;
+}
+
+.track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 40px 0 20px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 1000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(34, 34, 34, 0.8);
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease, background 0.2s ease;
+}
+
+.arrowLeft {
+  left: 4px;
+}
+
+.arrowRight {
+  right: 4px;
+}
+
+.arrow:hover {
+  background: #333;
+}
+
+.Row:hover .arrow {
+  opacity: 1;
+  pointer-events: auto;
+}
